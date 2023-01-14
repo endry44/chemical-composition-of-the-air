@@ -1,0 +1,23 @@
+class Air {
+  constructor() {
+    this.composition = {};
+  }
+  
+  addGas(gas, percentage) {
+    this.composition[gas] = percentage;
+  }
+  
+  removeGas(gas) {
+    delete this.composition[gas];
+  }
+  
+  getComposition() {
+    return this.composition;
+  }
+}
+
+const air = new Air();
+air.addGas("oxygen", 21);
+air.addGas("nitrogen", 78);
+air.addGas("argon", 1);
+console.log(air.getComposition());
